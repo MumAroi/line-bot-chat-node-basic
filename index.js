@@ -19,6 +19,10 @@ app.use('/', function(req, res, next){
     res.send('hello');
 });
 
+app.post('/webhook', (req, res, next) => {
+    res.sendStatus(200)
+})
+
 app.listen(app.get('port'), function(){
     console.log('run at port :', app.get('port'));
 });
