@@ -3,7 +3,10 @@
     "version": "1.0.0",
     "description": "test line bot",
     "main": "index.js",
-    "scripts": {},
+    "scripts": {
+      "start": "node index.js",
+      "test": "node test.js"
+    },
     "author": "",
     "license": "ISC",
     "repository": {
