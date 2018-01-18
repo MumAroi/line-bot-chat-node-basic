@@ -20,6 +20,7 @@ app.use('/', function(req, res, next){
 });
 
 app.post('/webhook', (req, res, next) => {
+    console.log(req);
     res.sendStatus(200)
 })
 
