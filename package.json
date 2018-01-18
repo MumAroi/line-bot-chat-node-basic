@@ -1,0 +1,18 @@
+{
+    "name": "line-bot-chat-node-basic",
+    "version": "1.0.0",
+    "description": "test line bot",
+    "main": "index.js",
+    "scripts": {},
+    "author": "",
+    "license": "ISC",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/qlsLeepinesslp/line-bot-chat-node-basic"
+    },
+    "dependencies": {
+        "body-parser": "^1.18.2",
+        "cors": "^2.8.4",
+        "express": "^4.16.2"
+    }
+}
