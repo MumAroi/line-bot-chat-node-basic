@@ -1,6 +1,7 @@
 let express    = require('express');
 let bodyParser = require('body-parser');
 let cors       = require('cors');
+var request    = require('request');
 let app        = express();
 
 // fix for Cross-origin resource sharing 
@@ -21,8 +22,8 @@ app.use('/', function(req, res, next){
 
 app.post('/webhook', (req, res, next) => {
     // console.log(req);
-    var text = req.body.events[0].message.text
-    var sender = req.body.events[0].source.userId
+    var text       = req.body.events[0].message.text
+    var sender     = req.body.events[0].source.userId
     var replyToken = req.body.events[0].replyToken
     console.log('this data');
     console.log(text, sender, replyToken);
@@ -43,7 +44,7 @@ function sendText (sender, text) {
           text: 'สวัสดีค่ะ เราเป็นผู้ช่วยปรึกษาด้านความรัก สำหรับหมามิ้น 💞'
         }
       ]
-    }
+    };
     request({
       headers: {
         'Content-Type': 'application/json',
