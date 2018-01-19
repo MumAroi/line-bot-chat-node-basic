@@ -4,8 +4,8 @@
     "description": "test line bot",
     "main": "index.js",
     "scripts": {
-      "start": "node index.js",
-      "test": "node test.js"
+        "start": "node index.js",
+        "test": "node test.js"
     },
     "author": "",
     "license": "ISC",
@@ -16,6 +16,7 @@
     "dependencies": {
         "body-parser": "^1.18.2",
         "cors": "^2.8.4",
-        "express": "^4.16.2"
+        "express": "^4.16.2",
+        "request": "^2.83.0"
     }
 }
