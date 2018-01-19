@@ -16,11 +16,11 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
 
-app.use('/', function(req, res, next){
+app.use('/', function(req, res){
     res.send('hello');
 });
 
-app.post('/webhook', (req, res, next) => {
+app.post('/webhook', (req, res) => {
     // console.log(req);
     var text       = req.body.events[0].message.text
     var sender     = req.body.events[0].source.userId
