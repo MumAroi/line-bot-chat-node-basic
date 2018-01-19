@@ -37,7 +37,7 @@ function sendText (sender, text) {
       'Content-Type': 'application/json',
       'Authorization': 'Bearer qwopvM24A0lBTUPEc/YKTUkZackCbGoCLBILGrz/yyJQ2n9eKMN8QIF0Jc5TBDjf7sGSSQeLFxpwrwu96k5MMuYtV/pmGs2Y6jsOipJQCoYbHg18kYRg0KZ+mYs7GSMV9LxohZLvPr0FQHZ7cEcM7QdB04t89/1O/w1cDnyilFU='
     },
-    url: 'https://api.line.me/v2/bot/message/push',
+    url: 'https://api.line.me/v2/bot/message/reply',
     method: 'POST',
     body: data,
     json: true
