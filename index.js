@@ -18,22 +18,42 @@ app.post('/webhook', (req, res) => {
   // console.log(req.body.events[0])
   if (text === 'สวัสดี' || text === 'Hello' || text === 'hello') {
     // sendText(sender, text)
-    sendText(replyToken, text);
+    sendReplayText({
+        // to: sender,
+        replyToken: replyToken,
+        messages: [
+          {
+            type: 'text',
+            text: 'สวัสดีค่ะ เราเป็นผู้ช่วยปรึกษาด้านความรัก สำหรับหมามิ้น 💞'
+          }
+        ]
+      });
+  }else if(text === 'หิว'){
+    sendReplayText({
+      replyToken: replyToken,
+      messages: [
+        {
+          type: 'sticker',
+          "packageId": "2",
+          "stickerId": "100"
+        }
+      ]
+    });
   }
   res.sendStatus(200);
 });
 
-function sendText (replyToken, text) {
-  let data = {
-    // to: sender,
-    replyToken: replyToken,
-    messages: [
-      {
-        type: 'text',
-        text: 'สวัสดีค่ะ เราเป็นผู้ช่วยปรึกษาด้านความรัก สำหรับหมามิ้น 💞'
-      }
-    ]
-  }
+function sendReplayText (message) {
+  // let data = {
+  //   // to: sender,
+  //   replyToken: replyToken,
+  //   messages: [
+  //     {
+  //       type: 'text',
+  //       text: 'สวัสดีค่ะ เราเป็นผู้ช่วยปรึกษาด้านความรัก สำหรับหมามิ้น 💞'
+  //     }
+  //   ]
+  // }
   request({
     headers: {
       'Content-Type': 'application/json',
@@ -41,7 +61,7 @@ function sendText (replyToken, text) {
     },
     url: 'https://api.line.me/v2/bot/message/reply',
     method: 'POST',
-    body: data,
+    body: message,
     json: true
   }, function (err, res, body) {
     if (err) console.log('error');
