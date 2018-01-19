@@ -34,8 +34,8 @@ app.post('/webhook', (req, res) => {
       messages: [
         {
           type: 'sticker',
-          "packageId": "2",
-          "stickerId": "100"
+          "packageId": "19",
+          "stickerId": "2"
         }
       ]
     });
