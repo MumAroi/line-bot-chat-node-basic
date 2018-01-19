@@ -27,10 +27,10 @@ app.post('/webhook', (req, res, next) => {
     var replyToken = req.body.events[0].replyToken
     console.log('this data');
     console.log(text, sender, replyToken);
-    
-    if (text === 'สวัสดี' || text === 'Hello' || text === 'hello') {
-        sendText(sender, text)
-    }
+    res.send(text);
+    // if (text === 'สวัสดี' || text === 'Hello' || text === 'hello') {
+    //     sendText(sender, text)
+    // }
 
     res.sendStatus(200)
 })
