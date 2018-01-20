@@ -28,7 +28,7 @@ app.post('/webhook', (req, res) => {
           }
         ]
       });
-  }else if(text === 'หิว'){
+  }else if(text === 'หิว' || text === 'sticker'){
     sendReplayText({
       replyToken: replyToken,
       messages: [
@@ -53,7 +53,7 @@ app.post('/webhook', (req, res) => {
                   {
                     "thumbnailImageUrl": "https://news.thaiware.com/upload_misc/news/2017_04/728x409/10042_1704041151391r.jpg",
                     "imageBackgroundColor": "#FFFFFF",
-                    "title": "แมวน้อยสดใส่",
+                    "title": "แมวน้อยสดใส",
                     "text": "ชื้อฉันไปสิ",
                     "actions": [
                         {
@@ -69,7 +69,7 @@ app.post('/webhook', (req, res) => {
                         {
                             "type": "uri",
                             "label": "View detail",
-                            "uri": "http://example.com/page/111"
+                            "uri": "https://news.thaiware.com/upload_misc/news/2017_04/728x409/10042_1704041151391r.jpg"
                         }
                     ]
                   },
@@ -92,7 +92,7 @@ app.post('/webhook', (req, res) => {
                         {
                             "type": "uri",
                             "label": "View detail",
-                            "uri": "http://example.com/page/222"
+                            "uri": "https://daily.rabbitstatic.com/wp-content/uploads/2017/01/750x560xF-Cat.jpg.pagespeed.ic.msAFaxglTb.jpg"
                         }
                     ]
                   }
@@ -102,6 +102,40 @@ app.post('/webhook', (req, res) => {
           }
         }
       ]
+    });
+  }else if(text === 'img-lists'){
+    sendReplayText({
+      "type": "template",
+      "altText": "this is a image carousel template",
+      "template": {
+          "type": "image_carousel",
+          "columns": [
+              {
+                "imageUrl": "https://news.thaiware.com/upload_misc/news/2017_04/728x409/10042_1704041151391r.jpg",
+                "action": {
+                  "type": "postback",
+                  "label": "Buy",
+                  "data": "action=buy&itemid=111"
+                }
+              },
+              {
+                "imageUrl": "https://daily.rabbitstatic.com/wp-content/uploads/2017/01/750x560xF-Cat.jpg.pagespeed.ic.msAFaxglTb.jpg",
+                "action": {
+                  "type": "message",
+                  "label": "Yes",
+                  "text": "yes"
+                }
+              },
+              {
+                "imageUrl": "http://1.bp.blogspot.com/-HNLH6E_ZMFM/U8ZU-yh482I/AAAAAAAAbhA/er5rHnsMmJg/s1600/%E0%B9%81%E0%B8%A1%E0%B8%A7%E0%B9%86.jpg",
+                "action": {
+                  "type": "uri",
+                  "label": "View detail",
+                  "uri": "http://1.bp.blogspot.com/-HNLH6E_ZMFM/U8ZU-yh482I/AAAAAAAAbhA/er5rHnsMmJg/s1600/%E0%B9%81%E0%B8%A1%E0%B8%A7%E0%B9%86.jpg"
+                }
+              }
+          ]
+      }
     });
   }
   res.sendStatus(200);
