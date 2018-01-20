@@ -39,6 +39,70 @@ app.post('/webhook', (req, res) => {
         }
       ]
     });
+  }else if(text === 'carousel'){
+    sendReplayText({
+      // to: sender,
+      replyToken: replyToken,
+      messages: [
+        {
+          "type": "template",
+          "altText": "this is a carousel template",
+          "template": {
+              "type": "carousel",
+              "columns": [
+                  {
+                    "thumbnailImageUrl": "https://news.thaiware.com/upload_misc/news/2017_04/728x409/10042_1704041151391r.jpg",
+                    "imageBackgroundColor": "#FFFFFF",
+                    "title": "this is menu",
+                    "text": "description",
+                    "actions": [
+                        {
+                            "type": "postback",
+                            "label": "Buy",
+                            "data": "action=buy&itemid=111"
+                        },
+                        {
+                            "type": "postback",
+                            "label": "Add to cart",
+                            "data": "action=add&itemid=111"
+                        },
+                        {
+                            "type": "uri",
+                            "label": "View detail",
+                            "uri": "http://example.com/page/111"
+                        }
+                    ]
+                  },
+                  {
+                    "thumbnailImageUrl": "https://daily.rabbitstatic.com/wp-content/uploads/2017/01/750x560xF-Cat.jpg.pagespeed.ic.msAFaxglTb.jpg",
+                    "imageBackgroundColor": "#000000",
+                    "title": "this is menu",
+                    "text": "description",
+                    "actions": [
+                        {
+                            "type": "postback",
+                            "label": "Buy",
+                            "data": "action=buy&itemid=222"
+                        },
+                        {
+                            "type": "postback",
+                            "label": "Add to cart",
+                            "data": "action=add&itemid=222"
+                        },
+                        {
+                            "type": "uri",
+                            "label": "View detail",
+                            "uri": "http://example.com/page/222"
+                        }
+                    ]
+                  }
+              ],
+              "imageAspectRatio": "rectangle",
+              "imageSize": "cover"
+          }
+        }
+      ]
+    });
   }
   res.sendStatus(200);
 });
