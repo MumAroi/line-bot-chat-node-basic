@@ -103,7 +103,7 @@ app.post('/webhook', (req, res) => {
         }
       ]
     });
-  }else if(text === 'img-lists'){
+  }else if(text === 'รูปรายการ'){
     sendReplayText({
       // to: sender,
       replyToken: replyToken,
