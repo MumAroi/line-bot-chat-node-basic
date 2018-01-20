@@ -39,7 +39,7 @@ app.post('/webhook', (req, res) => {
         }
       ]
     });
-  }else if(text === 'carousel'){
+  }else if(text === 'carousel' || text === 'สินค้า' || text === 'รายการ' || text === 'lists'){
     sendReplayText({
       // to: sender,
       replyToken: replyToken,
@@ -53,8 +53,8 @@ app.post('/webhook', (req, res) => {
                   {
                     "thumbnailImageUrl": "https://news.thaiware.com/upload_misc/news/2017_04/728x409/10042_1704041151391r.jpg",
                     "imageBackgroundColor": "#FFFFFF",
-                    "title": "this is menu",
-                    "text": "description",
+                    "title": "แมวน้อยสดใส่",
+                    "text": "ชื้อฉันไปสิ",
                     "actions": [
                         {
                             "type": "postback",
@@ -76,8 +76,8 @@ app.post('/webhook', (req, res) => {
                   {
                     "thumbnailImageUrl": "https://daily.rabbitstatic.com/wp-content/uploads/2017/01/750x560xF-Cat.jpg.pagespeed.ic.msAFaxglTb.jpg",
                     "imageBackgroundColor": "#000000",
-                    "title": "this is menu",
-                    "text": "description",
+                    "title": "แมวน้อยหน้าดุ",
+                    "text": "มีอะไรเราะ!!!",
                     "actions": [
                         {
                             "type": "postback",
