@@ -115,7 +115,7 @@ app.post('/webhook', (req, res) => {
               "type": "image_carousel",
               "columns": [
                   {
-                    "imageUrl": "https://news.thaiware.com/upload_misc/news/2017_04/728x409/10042_1704041151391r.jpg",
+                    "imageUrl": "https://daily.rabbitstatic.com/wp-content/uploads/2017/01/750x560xF-Cat.jpg.pagespeed.ic.msAFaxglTb.jpg",
                     "action": {
                       "type": "postback",
                       "label": "Buy",
@@ -123,7 +123,7 @@ app.post('/webhook', (req, res) => {
                     }
                   },
                   {
-                    "imageUrl": "https://daily.rabbitstatic.com/wp-content/uploads/2017/01/750x560xF-Cat.jpg.pagespeed.ic.msAFaxglTb.jpg",
+                    "imageUrl": "https://news.thaiware.com/upload_misc/news/2017_04/728x409/10042_1704041151391r.jpg",
                     "action": {
                       "type": "message",
                       "label": "Yes",
@@ -131,11 +131,11 @@ app.post('/webhook', (req, res) => {
                     }
                   },
                   {
-                    "imageUrl": "http://1.bp.blogspot.com/-HNLH6E_ZMFM/U8ZU-yh482I/AAAAAAAAbhA/er5rHnsMmJg/s1600/%E0%B9%81%E0%B8%A1%E0%B8%A7%E0%B9%86.jpg",
+                    "imageUrl": "https://f.ptcdn.info/174/053/000/ov0w3emozV1fbUMSd3F-o.jpg",
                     "action": {
                       "type": "uri",
                       "label": "View detail",
-                      "uri": "http://1.bp.blogspot.com/-HNLH6E_ZMFM/U8ZU-yh482I/AAAAAAAAbhA/er5rHnsMmJg/s1600/%E0%B9%81%E0%B8%A1%E0%B8%A7%E0%B9%86.jpg"
+                      "uri": "https://f.ptcdn.info/174/053/000/ov0w3emozV1fbUMSd3F-o.jpg"
                     }
                   }
               ]
